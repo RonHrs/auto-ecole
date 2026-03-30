@@ -1,0 +1,176 @@
+
+:root {
+  --primary: #0f172a; /* noir bleu */
+  --secondary: #1d9bf0; /* bleu X */
+  --accent: #0ea5e9;
+  --light: #f8fafc;
+  --gray: #94a3b8;
+  --dark: #020617;
+
+  --radius: 12px;
+  --transition: 0.3s ease;
+}
+
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* BODY */
+body {
+  background: var(--primary);
+  color: white;
+}
+
+/* NAVBAR */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 10%;
+  background: var(--dark);
+}
+
+nav h1 {
+  color: var(--secondary);
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 25px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+nav a:hover {
+  color: var(--secondary);
+}
+
+
+.hero {
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: url(img/6e93604a371d6fe057b1e032466007e7.jpg)
+}
+
+.hero h2 {
+  font-size: 3rem;
+}
+
+.hero p {
+  margin: 15px 0;
+  color: var(--gray);
+}
+
+.btn {
+  background: var(--secondary);
+  padding: 12px 25px;
+  border-radius: var(--radius);
+  text-decoration: none;
+  color: white;
+  transition: var(--transition);
+}
+
+.btn:hover {
+  background: var(--accent);
+  transform: scale(1.05);
+}
+
+
+section {
+  padding: 60px 10%;
+}
+
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: #020617;
+  padding: 20px;
+  border-radius: var(--radius);
+  transition: var(--transition);
+  height: 100%;
+
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(29,155,240,0.3);
+}
+
+.card h3 {
+  color: var(--secondary);
+}
+
+/* TEAM */
+.team {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  height: 300px;
+  margin-bottom: 20%;
+}
+
+.member {
+  flex: 1;
+  min-width: 250px;
+  background: #020617;
+  padding: 20px;
+  border-radius: var(--radius);
+  text-align: center;
+}
+
+/* CONTACT */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 500px;
+}
+
+input, textarea {
+  padding: 10px;
+  border: none;
+  border-radius: var(--radius);
+}
+
+button {
+  border: none;
+  cursor: pointer;
+}
+
+.footer{
+text-align:center;
+padding:40px;
+border-top:1px solid #2f3336;
+margin-top:60px;
+color:#8b98a5;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .hero h2 {
+    font-size: 2rem;
+  }
+
+  nav {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
